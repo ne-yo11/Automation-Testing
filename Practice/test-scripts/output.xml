@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-20T16:27:05.649927" rpa="false" schemaversion="5">
+<suite id="s1" name="OJT-activity" source="C:\Users\DEVOJT\Documents\QA testing files\Practice\test-scripts\OJT-activity.robot">
+<test id="s1-t1" name="Student Registration System" line="8">
+<kw name="Open Login Page" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:06.807829" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:4200/login'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-20T16:27:06.806366" elapsed="8.046952"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-20T16:27:14.854913" elapsed="1.344065"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:27:18.200586" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:27:16.199505" elapsed="2.001354"/>
+</kw>
+<tag>SRS-0001</tag>
+<doc>This keyword is for opening the login page</doc>
+<status status="PASS" start="2025-03-20T16:27:06.803197" elapsed="11.397925"/>
+</kw>
+<kw name="Verify Login Elements" owner="keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:18.237077" level="INFO">Current page contains element 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>${Username_field}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:18.202374" elapsed="0.034838"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${Username_field}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:27:18.237414" elapsed="0.156484"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:18.407412" level="INFO">Current page contains element 'xpath=//input[@placeholder='Password']'.</msg>
+<arg>${Password_field}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:18.394141" elapsed="0.013403"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${Password_field}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:27:18.407784" elapsed="0.026946"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:18.459415" level="INFO">Current page contains element 'xpath=//button[normalize-space()='Login']'.</msg>
+<arg>${Login_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:18.435020" elapsed="0.024515"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${Login_btn}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:27:18.459792" elapsed="0.024967"/>
+</kw>
+<tag>SRS-0001</tag>
+<doc>This keyword is for verifying the login elements</doc>
+<status status="PASS" start="2025-03-20T16:27:18.201857" elapsed="0.283059"/>
+</kw>
+<kw name="Verify Login validation" owner="keywords">
+<for flavor="IN">
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:18.486663" level="INFO">Typing text 'qwerty' into text field 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>${Username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:18.486402" elapsed="0.272360"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:18.759877" level="INFO">Typing password into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<msg time="2025-03-20T16:27:18.869807" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${Password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:18.759235" elapsed="0.250549"/>
+</kw>
+<kw name="Loginvalidation" owner="loginValidation">
+<msg time="2025-03-20T16:27:19.010724" level="INFO">${result} = Invalid user name but valid password</msg>
+<var>${result}</var>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-20T16:27:19.010180" elapsed="0.000655"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-20T16:27:19.011721" level="INFO">result: Invalid user name but valid password</msg>
+<arg>result: ${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-20T16:27:19.011328" elapsed="0.000539"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:19.012887" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
+<arg>${Login_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:19.012234" elapsed="0.309456"/>
+</kw>
+<var name="${username}">qwerty</var>
+<var name="${password}">admin</var>
+<status status="PASS" start="2025-03-20T16:27:18.486244" elapsed="0.836072"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:19.325017" level="INFO">Typing text 'admin' into text field 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>${Username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:19.324175" elapsed="0.256261"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:19.581550" level="INFO">Typing password into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<msg time="2025-03-20T16:27:19.667565" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${Password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:19.580912" elapsed="0.246337"/>
+</kw>
+<kw name="Loginvalidation" owner="loginValidation">
+<msg time="2025-03-20T16:27:19.828423" level="INFO">${result} = Valid user name but invalid password</msg>
+<var>${result}</var>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-20T16:27:19.827773" elapsed="0.000758"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-20T16:27:19.829781" level="INFO">result: Valid user name but invalid password</msg>
+<arg>result: ${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-20T16:27:19.829301" elapsed="0.000654"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:19.831214" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
+<arg>${Login_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:19.830673" elapsed="0.276294"/>
+</kw>
+<var name="${username}">admin</var>
+<var name="${password}">123456</var>
+<status status="PASS" start="2025-03-20T16:27:19.323615" elapsed="0.783713"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:20.110078" level="INFO">Typing text 'qwerty' into text field 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>${Username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:20.109307" elapsed="0.239705"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:20.350302" level="INFO">Typing password into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<msg time="2025-03-20T16:27:20.533642" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${Password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:20.349584" elapsed="0.301702"/>
+</kw>
+<kw name="Loginvalidation" owner="loginValidation">
+<msg time="2025-03-20T16:27:20.652676" level="INFO">${result} = Invalid user name and password</msg>
+<var>${result}</var>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-20T16:27:20.651850" elapsed="0.000941"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-20T16:27:20.654037" level="INFO">result: Invalid user name and password</msg>
+<arg>result: ${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-20T16:27:20.653429" elapsed="0.000775"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:20.655592" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
+<arg>${Login_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:20.654595" elapsed="0.176667"/>
+</kw>
+<var name="${username}">qwerty</var>
+<var name="${password}">123456</var>
+<status status="PASS" start="2025-03-20T16:27:20.108746" elapsed="0.723251"/>
+</iter>
+<iter>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:20.834664" level="INFO">Typing text 'admin' into text field 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>${Username_field}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:20.833810" elapsed="0.236723"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:21.072329" level="INFO">Typing password into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<msg time="2025-03-20T16:27:21.202957" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${Password_field}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:21.071364" elapsed="0.248101"/>
+</kw>
+<kw name="Loginvalidation" owner="loginValidation">
+<msg time="2025-03-20T16:27:21.320568" level="INFO">${result} = Valid user name and password</msg>
+<var>${result}</var>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-03-20T16:27:21.319979" elapsed="0.000659"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-03-20T16:27:21.321738" level="INFO">result: Valid user name and password</msg>
+<arg>result: ${result}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-03-20T16:27:21.321195" elapsed="0.000792"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:21.323432" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
+<arg>${Login_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:21.322465" elapsed="0.183268"/>
+</kw>
+<var name="${username}">admin</var>
+<var name="${password}">admin</var>
+<status status="PASS" start="2025-03-20T16:27:20.833152" elapsed="0.672795"/>
+</iter>
+<var>${username}</var>
+<var>${password}</var>
+<value>${INVALID_USERNAME}</value>
+<value>${VALID_PASSWORD}</value>
+<value>${VALID_USERNAME}</value>
+<value>${INVALID_PASSWORD}</value>
+<value>${INVALID_USERNAME}</value>
+<value>${INVALID_PASSWORD}</value>
+<value>${VALID_USERNAME}</value>
+<value>${VALID_PASSWORD}</value>
+<status status="PASS" start="2025-03-20T16:27:18.485823" elapsed="3.020307"/>
+</for>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:21.507328" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>text=Authentication successful!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-03-20T16:27:21.506796" elapsed="0.526742"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:27:23.035868" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:27:22.034112" elapsed="1.002056"/>
+</kw>
+<tag>SRS-0001</tag>
+<doc>This keyword is for verifying the login validation</doc>
+<status status="PASS" start="2025-03-20T16:27:18.485481" elapsed="4.550965"/>
+</kw>
+<kw name="Verify Search Elements" owner="keywords">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:23.087553" level="INFO">Current page contains element 'xpath=//a[normalize-space()='Student Master List']'.</msg>
+<arg>${Student_list_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:23.041453" elapsed="0.046361"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:23.090408" level="INFO">Clicking element 'xpath=//a[normalize-space()='Student Master List']'.</msg>
+<arg>${Student_list_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:23.089487" elapsed="0.508605"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:23.643111" level="INFO">Current page contains element 'xpath=//input[@placeholder='🔍 Search Here']'.</msg>
+<arg>${Search_Field}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:23.598624" elapsed="0.044727"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${Search_Field}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:27:23.644014" elapsed="0.071323"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:23.737640" level="INFO">Current page contains element 'xpath=//a[normalize-space()='Student Master List']'.</msg>
+<arg>${Student_list_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:23.716267" elapsed="0.021769"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${Student_list_btn}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:27:23.738745" elapsed="0.072862"/>
+</kw>
+<kw name="Page Should Contain Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:23.916568" level="INFO">Current page contains button 'xpath=//button[contains(text(),'🔄 Reset')]'.</msg>
+<arg>${Search_reset_btn}</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:23.812051" elapsed="0.104766"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${Search_reset_btn}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:27:23.917636" elapsed="0.082363"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:24.029780" level="INFO">Current page contains element 'xpath=//select[@class='ng-untouched ng-pristine ng-valid']'.</msg>
+<arg>${Search_Category_field}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:24.001084" elapsed="0.028943"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${Search_Category_field}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:27:24.033917" elapsed="0.074465"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:24.134283" level="INFO">Current page contains element 'xpath=(//input[@type='checkbox'])[1]'.</msg>
+<arg>${YearFilter_1styear_chkbox}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:24.108972" elapsed="0.025546"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:24.162468" level="INFO">Current page contains element 'xpath=(//input[@type='checkbox'])[2]'.</msg>
+<arg>${YearFilter_2ndyear_chkbox}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:24.135099" elapsed="0.027550"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:24.191430" level="INFO">Current page contains element 'xpath=(//input[@type='checkbox'])[3]'.</msg>
+<arg>${YearFilter_3rdyear_chkbox}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:24.163051" elapsed="0.028616"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:24.214049" level="INFO">Current page contains element 'xpath=(//input[@type='checkbox'])[4]'.</msg>
+<arg>${YearFilter_4thyear_chkbox}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:24.192119" elapsed="0.022150"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:24.237053" level="INFO">Current page contains element 'xpath=//button[contains(text(),'🔎 Search')]'.</msg>
+<arg>${Search_btn}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:24.214715" elapsed="0.022576"/>
+</kw>
+<kw name="Element Should Be Enabled" owner="SeleniumLibrary">
+<arg>${Search_btn}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-03-20T16:27:24.238145" elapsed="0.054667"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:24.326637" level="INFO">Current page contains element 'css=.table-scroll'.</msg>
+<arg>${Table_student_masterlist}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2025-03-20T16:27:24.293323" elapsed="0.033598"/>
+</kw>
+<tag>SRS-0001</tag>
+<doc>This keyword is for verifying the search elements</doc>
+<status status="PASS" start="2025-03-20T16:27:23.039332" elapsed="1.287851"/>
+</kw>
+<kw name="Verify Search Functionality" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Table_column_student}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-20T16:27:24.330247" elapsed="0.555158"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:24.886413" level="INFO">Selecting checkbox 'xpath=(//input[@type='checkbox'])[1]'.</msg>
+<arg>${YearFilter_1styear_chkbox}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:24.885855" elapsed="0.179343"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:27:26.066306" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:27:25.065600" elapsed="1.000947"/>
+</kw>
+<kw name="Get Filtered Course Codes" owner="SearchFunctionality">
+<msg time="2025-03-20T16:27:26.148726" level="INFO">@{matching_courses} = [ ]</msg>
+<var>@{matching_courses}</var>
+<arg>${Test_search_Year_level}</arg>
+<status status="PASS" start="2025-03-20T16:27:26.066983" elapsed="0.081831"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Table Should Contain" owner="SeleniumLibrary">
+<arg>${Table_student_masterlist}</arg>
+<arg>${course}</arg>
+<doc>Verifies table contains text ``expected``.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:26.149823" elapsed="0.000100"/>
+</kw>
+<var name="${course}"/>
+<status status="NOT RUN" start="2025-03-20T16:27:26.149459" elapsed="0.000593"/>
+</iter>
+<var>${course}</var>
+<value>@{matching_courses}</value>
+<status status="NOT RUN" start="2025-03-20T16:27:26.149034" elapsed="0.001160"/>
+</for>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:26.150877" level="INFO">Clicking button 'xpath=//button[contains(text(),'🔄 Reset')]'.</msg>
+<arg>${Search_reset_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:26.150526" elapsed="0.132870"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:26.284140" level="INFO">Typing text 'asdfasdf' into text field 'xpath=//input[@placeholder='🔍 Search Here']'.</msg>
+<arg>${Search_Field}</arg>
+<arg>${Test_search_invalid}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:26.283742" elapsed="0.155029"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:26.440223" level="INFO">Clicking button 'xpath=//button[contains(text(),'🔎 Search')]'.</msg>
+<arg>${Search_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:26.439666" elapsed="0.175964"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:26.616280" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-03-20T16:27:26.616015" elapsed="0.014197"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:26.632250" level="INFO">Clicking button 'xpath=//button[contains(text(),'🔄 Reset')]'.</msg>
+<arg>${Search_reset_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:26.631218" elapsed="0.167284"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:26.799190" level="INFO">Typing text 'John' into text field 'xpath=//input[@placeholder='🔍 Search Here']'.</msg>
+<arg>${Search_Field}</arg>
+<arg>${Testdata_search_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:26.798828" elapsed="0.161476"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:26.961797" level="INFO">Selecting options from selection list 'xpath=//select[@class='ng-untouched ng-pristine ng-valid']' by label By Student Name.</msg>
+<arg>${Search_Category_field}</arg>
+<arg>${Testdata_search_Byname}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-03-20T16:27:26.960807" elapsed="0.184663"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:27.146229" level="INFO">Clicking button 'xpath=//button[contains(text(),'🔎 Search')]'.</msg>
+<arg>${Search_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:27.145870" elapsed="0.178731"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:27:28.325678" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:27:27.325037" elapsed="1.000786"/>
+</kw>
+<kw name="Table Should Contain" owner="SeleniumLibrary">
+<arg>${Table_student_masterlist}</arg>
+<arg>${Testdata_search_name}</arg>
+<doc>Verifies table contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-20T16:27:28.326054" elapsed="0.084005"/>
+</kw>
+<tag>SRS-0001</tag>
+<doc>This keyword is for verifying the search functionality</doc>
+<status status="PASS" start="2025-03-20T16:27:24.329202" elapsed="4.081050"/>
+</kw>
+<kw name="Verify Activate/Deactive button Functionality" owner="keywords">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:28.412920" level="INFO">Executing JavaScript:
+var table = document.querySelector(".table-scroll"); if (table) { table.scrollLeft = table.scrollWidth; }
+Without any arguments.</msg>
+<arg>var table = document.querySelector(".table-scroll"); if (table) { table.scrollLeft = table.scrollWidth; }</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-20T16:27:28.412176" elapsed="0.012589"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:28.685263" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-20T16:27:28.685633" level="FAIL">Element 'css=tbody tr:nth-child(1) td:nth-child(18)' should have contained text 'Inactive' but its text was 'Active'.</msg>
+<arg>${AccountStatus_column}</arg>
+<arg>Inactive</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="FAIL" start="2025-03-20T16:27:28.426402" elapsed="0.386362">Element 'css=tbody tr:nth-child(1) td:nth-child(18)' should have contained text 'Inactive' but its text was 'Active'.</status>
+</kw>
+<msg time="2025-03-20T16:27:28.813091" level="INFO">${status} = False</msg>
+<var>${status}</var>
+<arg>Element Should Contain</arg>
+<arg>${AccountStatus_column}</arg>
+<arg>Inactive</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-03-20T16:27:28.425496" elapsed="0.387740"/>
+</kw>
+<if>
+<branch type="IF" condition="${status}">
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${Activate_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.813909" elapsed="0.000075"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.814305" elapsed="0.000076"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.814663" elapsed="0.000091"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.814956" elapsed="0.000069"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.815243" elapsed="0.000065"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${Search_Field}</arg>
+<arg>${Testdata_search_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.815473" elapsed="0.000048"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<arg>${Search_Category_field}</arg>
+<arg>${Testdata_search_Byname}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.815681" elapsed="0.000045"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.815876" elapsed="0.000045"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${Search_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.816070" elapsed="0.000044"/>
+</kw>
+<kw name="Table Should Contain" owner="SeleniumLibrary">
+<arg>${Table_student_masterlist}</arg>
+<arg>${Testdata_search_name}</arg>
+<doc>Verifies table contains text ``expected``.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.816322" elapsed="0.000044"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<arg>var table = document.querySelector(".table-scroll"); if (table) { table.scrollLeft = table.scrollWidth; }</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.816553" elapsed="0.000055"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<arg>${AccountStatus_column}</arg>
+<arg>Active</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.816767" elapsed="0.000041"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-20T16:27:28.816986" elapsed="0.000050"/>
+</kw>
+<status status="NOT RUN" start="2025-03-20T16:27:28.813511" elapsed="0.003592"/>
+</branch>
+<branch type="ELSE">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:28.817738" level="INFO">Clicking button 'xpath=(//button[@class='remove-btn'][contains(text(),'🔴 Deactivate')])[1]'.</msg>
+<arg>${Deactivate_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:28.817394" elapsed="0.160435"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:27:29.979597" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:27:28.978289" elapsed="1.001453"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:29.980203" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-03-20T16:27:29.979995" elapsed="0.006727"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:29.987613" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-03-20T16:27:29.987245" elapsed="0.553527"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:27:31.542444" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:27:30.541307" elapsed="1.001265"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:31.543074" level="INFO">Typing text 'John' into text field 'xpath=//input[@placeholder='🔍 Search Here']'.</msg>
+<arg>${Search_Field}</arg>
+<arg>${Testdata_search_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:31.542792" elapsed="0.165643"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:31.710921" level="INFO">Selecting options from selection list 'xpath=//select[@class='ng-untouched ng-pristine ng-valid']' by label By Student Name.</msg>
+<arg>${Search_Category_field}</arg>
+<arg>${Testdata_search_Byname}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-03-20T16:27:31.709485" elapsed="0.122672"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:27:32.333932" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:27:31.832540" elapsed="0.501544"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:32.334604" level="INFO">Clicking button 'xpath=//button[contains(text(),'🔎 Search')]'.</msg>
+<arg>${Search_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:32.334318" elapsed="0.110260"/>
+</kw>
+<kw name="Table Should Contain" owner="SeleniumLibrary">
+<arg>${Table_student_masterlist}</arg>
+<arg>${Testdata_search_name}</arg>
+<doc>Verifies table contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-20T16:27:32.444999" elapsed="0.109976"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:32.556813" level="INFO">Executing JavaScript:
+var table = document.querySelector(".table-scroll"); if (table) { table.scrollLeft = table.scrollWidth; }
+Without any arguments.</msg>
+<arg>var table = document.querySelector(".table-scroll"); if (table) { table.scrollLeft = table.scrollWidth; }</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-20T16:27:32.555479" elapsed="0.010146"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:32.595890" level="INFO">Element 'css=tbody tr:nth-child(1) td:nth-child(18)' contains text 'Inactive'.</msg>
+<arg>${AccountStatus_column}</arg>
+<arg>Inactive</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-20T16:27:32.566011" elapsed="0.030076"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-20T16:27:42.597193" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-20T16:27:32.596499" elapsed="10.000892"/>
+</kw>
+<status status="PASS" start="2025-03-20T16:27:28.817201" elapsed="13.780360"/>
+</branch>
+<status status="PASS" start="2025-03-20T16:27:28.813454" elapsed="13.784254"/>
+</if>
+<tag>SRS-0001</tag>
+<doc>This keyword is for verifying the activate/deactivate button functionality</doc>
+<status status="PASS" start="2025-03-20T16:27:28.411408" elapsed="14.186467"/>
+</kw>
+<kw name="Verify Log out Functionality" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:42.600983" level="INFO">Clicking button 'xpath=//button[normalize-space()='Log Out']'.</msg>
+<arg>${Logout_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-20T16:27:42.600443" elapsed="0.902193"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-03-20T16:27:43.504831" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-03-20T16:27:43.504001" elapsed="0.035591"/>
+</kw>
+<tag>SRS-0001</tag>
+<doc>This keyword is for verifying the logout functionality</doc>
+<status status="PASS" start="2025-03-20T16:27:42.599663" elapsed="0.940192"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-03-20T16:27:43.544710" elapsed="3.791406"/>
+</kw>
+<doc>This test suite is for the Student Registration System
+ for login validation,logout functionality, student search functionality and validation
+ and activate/deactivate button functionality</doc>
+<tag>SRS-0001</tag>
+<status status="PASS" start="2025-03-20T16:27:06.799349" elapsed="40.537227"/>
+</test>
+<doc>This test suite is for login validation for the Student Registration System
+Auhort: Neovern Enricoso</doc>
+<status status="PASS" start="2025-03-20T16:27:05.652523" elapsed="41.686985"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">SRS-0001</stat>
+</tag>
+<suite>
+<stat name="OJT-activity" id="s1" pass="1" fail="0" skip="0">OJT-activity</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
