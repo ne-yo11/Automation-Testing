@@ -1,4 +1,4 @@
-*** Variables ***
+*** Variables *** 
 #<------------------OTHERS------------------>
 ${URL}                         http://localhost:4200/login
 ${Browser}                     Chrome

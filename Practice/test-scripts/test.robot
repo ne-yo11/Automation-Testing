@@ -30,8 +30,8 @@ Second test
     Set Selenium Speed    1
     Open Browser    https://www.youtube.com/  ${BROWSER}
     Maximize Browser Window
-    Input Text    xpath=//input[@placeholder='Search']    Drunk text karaoke
-    Press Keys    xpath=//input[@placeholder='Search']    ENTER
+    Input Text       xpath=//input[@placeholder='Search']    Drunk text karaoke
+    Press Keys       xpath=//input[@placeholder='Search']    ENTER
     Sleep    5s
     Page Should Contain    Henry Moodie - drunk text (Karaoke Version)
     Click Element    locator=//yt-formatted-string[normalize-space()='Henry Moodie - drunk text (Karaoke Version)']
