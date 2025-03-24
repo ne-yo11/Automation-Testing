@@ -1,81 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.5 on win32)" generated="2025-03-17T09:56:02.329096" rpa="false" schemaversion="5">
-<suite id="s1" name="Test" source="C:\Users\DEVOJT\Documents\QA testing files\Practice\test.robot">
-<test id="s1-t1" name="Sample Test" line="17">
-<kw name="Set Selenium Speed" owner="SeleniumLibrary">
-<arg>value=1</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2025-03-17T09:56:02.805972" elapsed="0.001000"/>
-</kw>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-21T14:18:05.287468" rpa="false" schemaversion="5">
+<suite id="s1" name="OJT-activity" source="c:\Users\DEVOJT\Documents\QA testing files\Practice\test-scripts\OJT-activity.robot">
+<test id="s1-t1" name="test" line="22">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-03-17T09:56:02.807974" level="INFO">Opening browser 'Chrome' to base url 'https://quizcrossmindmaster.pythonanywhere.com'.</msg>
-<arg>https://quizcrossmindmaster.pythonanywhere.com</arg>
-<arg>${BROWSER}</arg>
+<msg time="2025-03-21T14:18:06.035369" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:4200/login'.</msg>
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-03-17T09:56:02.806972" elapsed="5.385287"/>
+<status status="PASS" start="2025-03-21T14:18:06.034593" elapsed="3.771871"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-03-17T09:56:08.195262" elapsed="1.066559"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-03-17T09:56:09.262828" level="INFO">Typing text 'neovern07@gmail.com' into text field 'xpath=//form[@id='loginForm']//input[@placeholder='Email']'.</msg>
-<arg>xpath=//form[@id='loginForm']//input[@placeholder='Email']</arg>
-<arg>${Email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-17T09:56:09.261821" elapsed="3.218358"/>
-</kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-03-17T09:56:12.481176" level="INFO">Typing password into text field 'xpath=//form[@id='loginForm']//input[@placeholder='Password']'.</msg>
-<msg time="2025-03-17T09:56:14.565239" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>xpath=//form[@id='loginForm']//input[@placeholder='Password']</arg>
-<arg>${Password}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-17T09:56:12.481176" elapsed="3.163203"/>
-</kw>
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-03-17T09:56:15.645384" level="INFO">Clicking button 'xpath=//button[normalize-space()='LOGIN']'.</msg>
-<arg>xpath=//button[normalize-space()='LOGIN']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-03-17T09:56:15.644379" elapsed="5.159948"/>
-</kw>
-<kw name="Wait Until Element Contains" owner="SeleniumLibrary">
-<arg>xpath=//a[normalize-space()='View Class']</arg>
-<arg>View Class</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" start="2025-03-17T09:56:20.804327" elapsed="6.232954"/>
-</kw>
-<kw name="Mouse Over" owner="SeleniumLibrary">
-<msg time="2025-03-17T09:56:27.037281" level="INFO">Simulating Mouse Over on element 'xpath=//a[normalize-space()='View Class']'.</msg>
-<arg>xpath=//a[normalize-space()='View Class']</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<status status="PASS" start="2025-03-17T09:56:27.037281" elapsed="2.299108"/>
+<status status="PASS" start="2025-03-21T14:18:09.952779" elapsed="0.081329"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-03-17T09:56:39.337794" level="INFO">Slept 10 seconds.</msg>
-<arg>10s</arg>
+<msg time="2025-03-21T14:18:12.036707" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-03-17T09:56:29.336389" elapsed="10.001405"/>
+<status status="PASS" start="2025-03-21T14:18:10.035654" elapsed="2.001358"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:12.038324" level="INFO">Typing text 'admin' into text field 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>${Username_field}</arg>
+<arg>${VALID_USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:12.037734" elapsed="0.128949"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:12.168807" level="INFO">Typing password into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<msg time="2025-03-21T14:18:12.280988" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${Password_field}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:12.167891" elapsed="0.329310"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:12.499778" level="INFO">Clicking button 'xpath=//button[normalize-space()='Login']'.</msg>
+<arg>${Login_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:12.498896" elapsed="0.248317"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:12.756096" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>text=Authentication successful!</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-03-21T14:18:12.755303" elapsed="0.515106"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-21T14:18:14.273283" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-21T14:18:13.271797" elapsed="1.002314"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:14.279765" level="INFO">Clicking element 'xpath=//a[normalize-space()='Student Master List']'.</msg>
+<arg>${Student_list_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:14.278796" elapsed="0.309470"/>
+</kw>
+<kw name="Verify Edit Functionality" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:14.595384" level="INFO">Clicking button 'xpath=//button[contains(text(),'🔄 Reset')]'.</msg>
+<arg>${Search_reset_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:14.594285" elapsed="0.158608"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:14.754048" level="INFO">Typing text 'John' into text field 'xpath=//input[@placeholder='🔍 Search Here']'.</msg>
+<arg>${Search_Field}</arg>
+<arg>${Testdata_search_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:14.753388" elapsed="0.167911"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:14.922592" level="INFO">Selecting options from selection list 'xpath=//select[@class='ng-untouched ng-pristine ng-valid']' by label By Student Name.</msg>
+<arg>${Search_Category_field}</arg>
+<arg>${Testdata_search_Byname}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-03-21T14:18:14.921814" elapsed="0.157710"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-21T14:18:15.580575" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-21T14:18:15.079894" elapsed="0.501008"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:15.581472" level="INFO">Clicking button 'xpath=//button[contains(text(),'🔎 Search')]'.</msg>
+<arg>${Search_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:15.581160" elapsed="0.130283"/>
+</kw>
+<kw name="Table Should Contain" owner="SeleniumLibrary">
+<arg>${Table_student_masterlist}</arg>
+<arg>${Testdata_search_name}</arg>
+<doc>Verifies table contains text ``expected``.</doc>
+<status status="PASS" start="2025-03-21T14:18:15.712171" elapsed="0.119163"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:15.833593" level="INFO">Executing JavaScript:
+var table = document.querySelector(".table-scroll"); if (table) { table.scrollLeft = table.scrollWidth; }
+Without any arguments.</msg>
+<arg>var table = document.querySelector(".table-scroll"); if (table) { table.scrollLeft = table.scrollWidth; }</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-03-21T14:18:15.832284" elapsed="0.018981"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:15.852095" level="INFO">Clicking button 'xpath=(//button[@class='edit-btn'][contains(text(),'✏️ Edit')])[1]'.</msg>
+<arg>${Edit_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:15.851670" elapsed="0.310650"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:16.163909" level="INFO">Typing text 'pakyaw' into text field 'xpath=//input[@id='lastname']'.</msg>
+<arg>${Lastname_field_update}</arg>
+<arg>${Testdata_update_lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:16.162978" elapsed="0.216385"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:16.380313" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>${Save_changes_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:16.379820" elapsed="0.243125"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:16.624375" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2025-03-21T14:18:16.623812" elapsed="1.022100"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:17.647296" level="INFO">Typing text 'John' into text field 'xpath=//input[@placeholder='🔍 Search Here']'.</msg>
+<arg>${Search_Field}</arg>
+<arg>${Testdata_search_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:17.646474" elapsed="0.663443"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:18.312084" level="INFO">Selecting options from selection list 'xpath=//select[@class='ng-untouched ng-pristine ng-valid']' by label By Student Name.</msg>
+<arg>${Search_Category_field}</arg>
+<arg>${Testdata_search_Byname}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-03-21T14:18:18.310874" elapsed="0.111723"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-21T14:18:18.926300" level="INFO">Slept 500 milliseconds.</msg>
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-21T14:18:18.423392" elapsed="0.504025"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:18.928347" level="INFO">Clicking button 'xpath=//button[contains(text(),'🔎 Search')]'.</msg>
+<arg>${Search_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:18.927883" elapsed="0.118981"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-03-21T14:18:19.078000" level="INFO">${lastname} = pakyaw</msg>
+<var>${lastname}</var>
+<arg>${Lastname_column_table}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-21T14:18:19.047323" elapsed="0.030921"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${lastname}</arg>
+<arg>${Testdata_update_lastname}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-03-21T14:18:19.078530" elapsed="0.000416"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-21T14:18:24.080048" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-21T14:18:19.079178" elapsed="5.001471"/>
+</kw>
+<tag>SRS-0001</tag>
+<doc>This keyword is for verifying the edit/update functionality
+ for the student information.
+ I will change the last name of the student and check if the changes are saved</doc>
+<status status="PASS" start="2025-03-21T14:18:14.592294" elapsed="9.488995"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-03-17T09:56:39.338796" elapsed="3.845709"/>
+<status status="PASS" start="2025-03-21T14:18:24.082671" elapsed="2.837035"/>
 </kw>
-<status status="PASS" start="2025-03-17T09:56:02.804971" elapsed="40.380531"/>
+<doc>This test suite is for the Student Registration System
+ for login validation,logout functionality, student search functionality and validation
+ and activate/deactivate button functionality</doc>
+<tag>SRS-0002</tag>
+<status status="PASS" start="2025-03-21T14:18:06.030161" elapsed="20.891045"/>
 </test>
-<doc>This is a sample test is to login to the website
-https://quizcrossmindmaster.pythonanywhere.com
-Author: Neovern Enricosooo</doc>
-<status status="PASS" start="2025-03-17T09:56:02.332096" elapsed="40.854544"/>
+<doc>This test suite is for login validation for the Student Registration System
+Auhort: Neovern Enricoso</doc>
+<status status="PASS" start="2025-03-21T14:18:05.296580" elapsed="21.631086"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<stat pass="1" fail="0" skip="0">SRS-0002</stat>
 </tag>
 <suite>
-<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+<stat name="OJT-activity" id="s1" pass="1" fail="0" skip="0">OJT-activity</stat>
 </suite>
 </statistics>
 <errors>

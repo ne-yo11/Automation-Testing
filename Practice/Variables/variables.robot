@@ -26,6 +26,7 @@ ${Testdata_search_name}        John
 ${Test_search_Year_level}      1st Year
 ${Testdata_search_Byname}      By Student Name
 ${Test_search_invalid}         asdfasdf
+${Testdata_update_lastname}    pakyaw
 ${YearFilter_1styear_chkbox}   xpath=(//input[@type='checkbox'])[1]
 ${YearFilter_2ndyear_chkbox}   xpath=(//input[@type='checkbox'])[2]
 ${YearFilter_3rdyear_chkbox}   xpath=(//input[@type='checkbox'])[3]
@@ -37,15 +38,19 @@ ${Search_reset_btn}            xpath=//button[contains(text(),'🔄 Reset')]
 ${Table_student_masterlist}    css=.table-scroll
 ${AccountStatus_column}        css=tbody tr:nth-child(1) td:nth-child(18)
 ${Search_btn}                  xpath=//button[contains(text(),'🔎 Search')]
+${Edit_btn}                    xpath=(//button[@class='edit-btn'][contains(text(),'✏️ Edit')])[1]
+${Save_changes_btn}            xpath=//button[@type='submit']
 ${Activate_btn}                xpath=//button[contains(text(),'🔄 Activate')]
 ${Deactivate_btn}              xpath=(//button[@class='remove-btn'][contains(text(),'🔴 Deactivate')])[1]
+${Lastname_field_update}       xpath=//input[@id='lastname']
+${Lastname_column_table}       css=tbody tr td:nth-child(3)
 
 #<--------------Enrollment------------------>
 ${Firstname_field}             xpath=//input[@formcontrolname='firstName']
 ${Firstname_label}             xpath=//div[@class='masterlist-container']//div[1]//label[1]
 ${Middlename_field}            xpath=//input[@formcontrolname='middleName']
 ${Middlename_label}            xpath=//label[normalize-space()='Middle Name:']
-${Lastname_field}              xpath=//input[@formcontrolname='lastName']
+${Lastname_field}              xpath=//input[@formcontrolname='lastName']    
 ${Lastname_label}              xpath=//label[normalize-space()='Last Name:']
 ${Birthdate_field}             xpath=//input[@type='date']
 ${Birthdate_label}             xpath=//label[normalize-space()='Birthdate:']
