@@ -1,0 +1,22 @@
+Task
+1. Login validation
+   -Log message for;
+    	*Valid user invalid password
+    	*invalid user valid password
+    	*invalid user invalid password
+    	*Valid user valid password
+   -verify popup after successful login
+
+2. UI improvements
+    *Year level filter change to checkbox
+    *Only one search field 
+    *Add category dropdown (Search by Student name, search by Student Code, by course code)
+
+3. Search for a student in the table.
+   -Verify activate/deactive button
+    	*Verify Account Status
+
+4. add student code in the popup (modify the text inside the popup)
+   log the student code
+
+5. Automate student registration

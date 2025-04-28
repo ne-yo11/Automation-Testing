@@ -19,3 +19,8 @@ def get_filtered_course_codes(search_term):
             matching_courses.append(course_code)
 
     return matching_courses
+
+def student_code_from_popup(message):
+    student_code = message.split("with code")[-1].strip()
+    student_code = student_code.rstrip("?")
+    return student_code
